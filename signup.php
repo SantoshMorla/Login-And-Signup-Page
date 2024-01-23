@@ -7,7 +7,7 @@ $dbname = "signup_login";
 // Create a new database connection
 $conn = new mysqli($servername, $username, $password);
 
-// Check the connection
+// Check the connection...
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
