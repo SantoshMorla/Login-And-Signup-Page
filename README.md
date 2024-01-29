@@ -41,7 +41,7 @@ In this project we are Dockerizing Siginup and Login Form using HTML CSS JAVASCR
   ##### $ sudo docker-compose up -d <br>
    You will get the output as shown in below image. <br>
 
-     ![Signup_login1](https://github.com/mayurghule494/Siginup_Login_Page-html-js-php/assets/54388290/b8928db4-5db2-44f0-aaa7-452f9d5827bb)
+     ![Signup_login1](https://github.com/SantoshMorla/Login-And-Signup-Page.git)
 
 
 
