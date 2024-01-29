@@ -23,6 +23,6 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 # Expose port 80
 EXPOSE 80
 
-# Start Apache server
+# Start Apache server.
 CMD ["apache2-foreground"]
 
