@@ -8,8 +8,10 @@
                 }
                 stage('build'){
                     when{
-
-                        branch 'master'
+                        allOf{
+                            branch 'master'    
+                        }
+                        
                     }
                     steps{
                         sh 'docker build -t login:latest .'
