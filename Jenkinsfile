@@ -15,7 +15,10 @@
                         sh 'docker build -t login:latest .'
                     }
                     post{
-                        echo 'Successfully build'
+                        success{
+                            echo 'Successfully build'
+                        }
+                        
                     }    
                 }
                 stage('deploy'){
