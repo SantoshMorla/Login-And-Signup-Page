@@ -3,16 +3,16 @@
             stages{
                 stage('Code'){
                     steps{
-                        git url: 'https://github.com/SantoshMorla/Login-And-Signup-Page.git' 
+                        git url: 'https://github.com/SantoshMorla/Login-And-Signup-Page.git',branch: 'master'   
                     }
                 }
                 stage('build'){
-                    when{
-                        allOf{
-                            branch 'master'    
-                        }
+                    // when{
+                    //     allOf{
+                             
+                    //     }
                         
-                    }
+                    // }
                     steps{
                         sh 'docker build -t login:latest .'
                     }
