@@ -1,28 +1,29 @@
-pipeline{
-        agent {label 'batch3-agent'}
-        stages{
-            stage('Code'){
-                steps{
-                    git url: 'https://github.com/SantoshMorla/Login-And-Signup-Page.git' 
+    pipeline{
+            agent {label 'batch3-agent'}
+            stages{
+                stage('Code'){
+                    steps{
+                        git url: 'https://github.com/SantoshMorla/Login-And-Signup-Page.git' 
+                    }
                 }
-            }
-            stage('build'){
-                when{
-                    branch: 'master'
+                stage('build'){
+                    when{
+
+                        branch 'master'
+                    }
+                    steps{
+                        sh 'docker build -t login:latest .'
+                    }
+                    post{
+                        echo 'Successfully build'
+                    }    
                 }
-                steps{
-                    sh 'docker build -t login:latest .'
-                }
-                post{
-                    echo 'Successfully build'
-                }    
-            }
-            stage('deploy'){
-                steps{
-                    sh 'docker-compose down && docker-compose up'
+                stage('deploy'){
+                    steps{
+                        sh 'docker-compose down && docker-compose up'
+                    }
+
                 }
 
             }
-
         }
-    }
